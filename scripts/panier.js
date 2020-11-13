@@ -14,7 +14,7 @@ function plusTeddy(idTeddy, prixTeddy) {//todo
             produit.quantityp += 1;
             totalpanier[idTeddy] += prixTeddy;
             document.getElementById('quantiteProduit' + idTeddy).innerHTML = produit.quantityp;
-            document.getElementById('totalproduit' + idTeddy).innerHTML = produit.quantityp * prixTeddy;
+            document.getElementById('totalproduit' + idTeddy).innerHTML = produit.quantityp * prixTeddy + ' €';
         }
     }
     let panierDjson = JSON.stringify(panierD);
@@ -32,7 +32,7 @@ function moinsTeddy(idTeddy, prixTeddy) {//todo
             produit.quantityp -= 1;
             totalpanier[idTeddy] -= prixTeddy;
             document.getElementById('quantiteProduit' + idTeddy).innerHTML = produit.quantityp;
-            document.getElementById('totalproduit' + idTeddy).innerHTML = produit.quantityp * prixTeddy;
+            document.getElementById('totalproduit' + idTeddy).innerHTML = produit.quantityp * prixTeddy + ' €';
         }
         else if(idp == idTeddy && produit.quantityp == 1){
             delete totalpanier[idTeddy];
@@ -52,7 +52,7 @@ function calculTotalPrixpanier() {
     console.log ('id : ' + key + ' val : ' + totalpanier[key]);
     totalpanierprix += totalpanier[key];
     }
-    document.getElementById('totalpanier').innerHTML = totalpanierprix;
+    document.getElementById('totalpanier').innerHTML = totalpanierprix + ' €';
 }
 
 
@@ -81,7 +81,8 @@ if (panierLinea != null) {
             </div>
             <div class="infosproduit">
                 Nom : ${infoproduit.name}</br>
-                prix : ${infoproduit.price}</br>
+                Prix : ${infoproduit.price} €</br>
+                Description : ${infoproduit.description}</br>
                 quantité :
                 <button onclick="moinsTeddy('${teddyId}',${infoproduit.price});calculTotalPrixpanier();">
                 -
@@ -94,7 +95,7 @@ if (panierLinea != null) {
                 </button>
                 </br>
                 total produit :
-                <div id="totalproduit${teddyId}">${totalproduit}
+                <div id="totalproduit${teddyId}">${totalproduit} €
                 </div></br>
             </div>
         </div>`;

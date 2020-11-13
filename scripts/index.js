@@ -10,7 +10,7 @@ fetch('http://localhost:3000/api/teddies')
                             <img src="${produit.imageUrl}" alt="${produit.name}"></br>
                             <p>Nom : ${produit.name}</p>
                             <p>Description : ${produit.description}<p>
-                            <p>Prix : ${produit.price}</p>
+                            <p>Prix : ${produit.price} €</p>
                             <a href="./pages/produit.html?:_id=${produit._id}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Commander</a>
                         </section>
                     </div>`

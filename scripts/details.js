@@ -15,10 +15,10 @@ fetch(teddyAPI)
             </section>
         </div>
         <div class="col-sm">
-            Nom : ${produit.name}</br>
-            Couleur : ${produit.colors}</br>
-            Description : ${produit.description}</br>
-            prix : ${produit.price}</br>
+            Nom : ${produit.name}</br></br>
+            Couleur : ${produit.colors}</br></br>
+            Description : ${produit.description}</br></br>
+            prix : ${produit.price} €</br>
                     <button id="ajoutPanier">
                     ajouter au panier
                     </button>
