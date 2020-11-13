@@ -20,6 +20,10 @@ h2 {
     margin-left: 200px;
 }
 
+.modifquantite {
+    display: inline-block;
+}
+
 #prixtotal {
     text-align: right;
     margin-right: 20px;
@@ -29,6 +33,10 @@ h2 {
     border: 1px solid black;
     width: 100px;
     display: inline-block;
+}
+
+#formulairecommande {
+    margin-top: 10px;
 }
 
 #formulairecommande label {

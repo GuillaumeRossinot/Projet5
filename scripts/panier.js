@@ -83,16 +83,18 @@ if (panierLinea != null) {
                 Nom : ${infoproduit.name}</br>
                 Prix : ${infoproduit.price} €</br>
                 Description : ${infoproduit.description}</br>
-                Quantité :
-                <button onclick="moinsTeddy('${teddyId}',${infoproduit.price});calculTotalPrixpanier();">
-                -
-                </button>
-                <div id="quantiteProduit${teddyId}">
-                ${quantityp}
+                <div class="modifquantite">
+                    Quantité :
+                    <button onclick="moinsTeddy('${teddyId}',${infoproduit.price});calculTotalPrixpanier();">
+                    -
+                    </button>
+                    <div id="quantiteProduit${teddyId}">
+                    ${quantityp}
+                    </div>
+                    <button onclick="plusTeddy('${teddyId}',${infoproduit.price});calculTotalPrixpanier();">
+                    +
+                    </button>
                 </div>
-                <button onclick="plusTeddy('${teddyId}',${infoproduit.price});calculTotalPrixpanier();">
-                +
-                </button>
                 </br>
                 Total produit :
                 <div id="totalproduit${teddyId}">${totalproduit} €
