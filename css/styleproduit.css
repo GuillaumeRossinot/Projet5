@@ -1,0 +1,31 @@
+h2 {
+    text-align: center;
+}
+
+.produit {
+    border: 1px solid black;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.ours {
+    border: 1px solid black;
+}
+
+.images {
+    border: 1px solid black;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+.colorselect {
+    border: 1px solid black;
+}
+
+.prix {
+    border: 1px solid black;
+}

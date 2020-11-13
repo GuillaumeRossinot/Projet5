@@ -1,0 +1,11 @@
+h2 {
+    text-align: center;
+}
+
+.produit {
+    border: 1px solid black;
+}
+
+#listeproduits {
+    border: 1px solid black;
+}

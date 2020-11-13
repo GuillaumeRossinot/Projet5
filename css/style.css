@@ -1,0 +1,83 @@
+body {
+    height: 100vh;
+    background-color: lightgray;
+}
+
+header {
+    background-color: lightgray;
+    height: 150px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+header img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-left: 750px;
+}
+
+header h1 {
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+
+header a {
+    float: right;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+i {
+    font-size: 50px;
+}
+
+
+/* .produit {
+    border: 1px solid black;
+} */
+
+.ours {
+    border: 1px solid black;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.ours,
+a {
+    text-align: center
+}
+
+h3 {
+    text-align: center;
+}
+
+.container {
+    margin-top: 110px;
+}
+
+footer {
+    background-color: lightgray;
+    height: 100px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.infofooter {
+    margin-left: 10px;
+    color: black;
+}
