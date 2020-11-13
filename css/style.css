@@ -1,13 +1,14 @@
 body {
     height: 100vh;
-    background-color: lightgray;
+    background-color: #43a0d1 !important;
 }
 
 header {
-    background-color: lightgray;
+    background-color: #4350d1;
     height: 150px;
+    width: 100%;
+    display: block;
     right: 0;
-    bottom: 0;
     left: 0;
 }
 
@@ -16,13 +17,15 @@ header img {
     float: left;
     width: 100px;
     height: 100px;
-    margin-left: 750px;
+    margin-left: 40%;
 }
 
 header h1 {
     position: relative;
     top: 30px;
-    left: 10px;
+    width: 100%;
+    right: 0;
+    left: 0;
 }
 
 header a {
@@ -31,6 +34,7 @@ header a {
     height: 100px;
     margin-top: 30px;
     margin-right: 10px;
+    text-decoration: none;
 }
 
 i {
@@ -42,7 +46,7 @@ i {
     border: 1px solid black;
 } */
 
-.ours {
+.produitours {
     border: 1px solid black;
 }
 
@@ -55,7 +59,7 @@ img {
     margin-right: auto
 }
 
-.ours,
+.produitours,
 a {
     text-align: center
 }
@@ -69,7 +73,7 @@ h3 {
 }
 
 footer {
-    background-color: lightgray;
+    background-color: #4350d1;
     height: 100px;
     position: fixed;
     right: 0;

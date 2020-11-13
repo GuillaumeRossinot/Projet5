@@ -1,3 +1,15 @@
+#titre {
+    position: relative;
+    top: 0;
+    width: 100%;
+    right: 0;
+    left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 h2 {
     text-align: center;
 }
@@ -9,17 +21,13 @@ h2 {
     margin: 0 auto;
 }
 
-.ours {
-    border: 1px solid black;
-}
-
 .images {
     border: 1px solid black;
 }
 
-img {
-    height: 150px;
-    width: 150px;
+.ours img {
+    height: 300px;
+    width: 300px;
 }
 
 .colorselect {
