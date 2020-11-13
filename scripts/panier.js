@@ -77,24 +77,26 @@ if (panierLinea != null) {
                 images1.innerHTML += `
         <div class="col-sm" id="listeproduits${teddyId}">
             <div class="imageproduit">
-            <img src="${infoproduit.imageUrl}" alt="${infoproduit.name}"></br>
+                <img src="${infoproduit.imageUrl}" alt="${infoproduit.name}"></br>
             </div>
-            Nom : ${infoproduit.name}</br>
-            prix : ${infoproduit.price}</br>
-            quantité :
-            <button onclick="moinsTeddy('${teddyId}',${infoproduit.price});calculTotalPrixpanier();">
-            -
-            </button>
-            <div id="quantiteProduit${teddyId}">
-            ${quantityp}
+            <div class="infosproduit">
+                Nom : ${infoproduit.name}</br>
+                prix : ${infoproduit.price}</br>
+                quantité :
+                <button onclick="moinsTeddy('${teddyId}',${infoproduit.price});calculTotalPrixpanier();">
+                -
+                </button>
+                <div id="quantiteProduit${teddyId}">
+                ${quantityp}
+                </div>
+                <button onclick="plusTeddy('${teddyId}',${infoproduit.price});calculTotalPrixpanier();">
+                +
+                </button>
+                </br>
+                total produit :
+                <div id="totalproduit${teddyId}">${totalproduit}
+                </div></br>
             </div>
-            <button onclick="plusTeddy('${teddyId}',${infoproduit.price});calculTotalPrixpanier();">
-            +
-            </button>
-            </br>
-            total produit :
-            <div id="totalproduit${teddyId}">${totalproduit}
-            </div></br>
         </div>`;
                 totalpanier[teddyId] = Number(totalproduit);
                 //console.log( totalpanier);
