@@ -19,21 +19,36 @@
     </header>
 
     <main>
-        <h2>panier</h2>
+        <h2>Votre panier :</h2>
 
         <article class="produit">
 
             <section class="ours">
-                votre panier :
                 <div id="produits">
                 </div>
                 <div id="prixtotal">
-                    total :
+                    Total du panier :
                     <div id="totalpanier">
                         - €
                     </div>
                 </div>
             </section>
+            <setion class="col-sm" id="formulairecommande">
+                <form action="" method="get" class="form-example">
+                    <label for="name">Nom : </label>
+                    <input type="text" name="nom" id="nom" required></br>
+                    <label for="name">Prénom : </label>
+                    <input type="text" name="prenom" id="prenom" required></br>
+                    <label for="name">Adresse : </label>
+                    <input type="text" name="adresse" id="adresse" required></br>
+                    <label for="name">Ville : </label>
+                    <input type="text" name="ville" id="ville" required></br>
+                    <label for="email">Mail : </label>
+                    <input type="email" name="email" id="email" required></br>
+                    <label></label>
+                    <input type="submit" value="Envoyer !">
+                </form>
+            </setion>
         </article>
 
     </main>

@@ -27,4 +27,16 @@ h2 {
 
 .col-sm {
     border: 1px solid black;
+    width: 100px;
+    display: inline-block;
+}
+
+#formulairecommande label {
+    display: inline-block;
+    width: 100px;
+    margin-left: 50%;
+}
+
+#formulairecommande input {
+    display: inline-block;
 }
