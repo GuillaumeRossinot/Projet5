@@ -5,7 +5,10 @@
     <title>Orinoco</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" rel="stylesheet" href="../css/styleconfcommande.css" />
+    <link type="text/css" rel="stylesheet" href="../css/stylepanier.css" />
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ff235be735.js" crossorigin="anonymous"></script>
 </head>
 
 <header>
@@ -17,18 +20,25 @@
 
     <article class="produit">
 
-        <section class="ours">
-            Votre commande a été confirmer !
+        <section id="confCommande">
+            1
         </section>
-
+        <div id="prixTotal"></div>€
 </main>
 
 <footer>
 
+    <div class="infofooter">
+        Orinoco </br>
+        Adresse : 3 rue des abeilles 35000 Rennes</br>
+        Email : contact@orinoco.fr</br>
+        Numéro de téléphone : 0167956647</br>
+    </div>
+
 </footer>
-<form action="http://localhost:3000/api/order" method="POST">
-    <input type="submit" value="Submit">
-</form>
+
+<script type="text/javascript" src="../scripts/confirmation.js"></script>
+
 </body>
 
 </html>
