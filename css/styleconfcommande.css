@@ -1,3 +1,31 @@
-.produit {
-    border: 1px solid black;
+h2 {
+    text-align: center;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+.TextConfCommande {
+    border: 1px solid grey;
+    text-align: center;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    background-color: white;
+}
+
+.confCommande {
+    display: inline-flex !important;
+
+}
+
+.confCommande div {
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

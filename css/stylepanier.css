@@ -1,27 +1,56 @@
 h2 {
     text-align: center;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
 }
 
-.produit {
-    border: 1px solid black;
+
+#produits {
+    border: 1px solid grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: white;
 }
+
 
 #listeproduits {
-    border: 1px solid black;
+    border: 1px solid grey;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .imageproduit {
     float: left;
     margin-top: 10px;
+    border: 1px solid grey;
 }
 
 .infosproduit {
     text-align: left;
     margin-left: 200px;
+    padding-top: 15px;
 }
 
 .modifquantite {
-    display: inline-block;
+    display: inline-flex !important;
+
+}
+
+.modifquantite div,
+.modifquantite button {
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.modifquantite button {
+    height: 10px;
+    text-align: center;
+    padding-bottom: 25px;
 }
 
 #prixtotal {
@@ -30,19 +59,23 @@ h2 {
 }
 
 .col-sm {
-    border: 1px solid black;
+    border: 1px solid grey;
     width: 100px;
     display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    text-align: center;
 }
 
 #formulairecommande {
     margin-top: 10px;
+    text-align: center;
 }
 
 #formulairecommande label {
     display: inline-block;
     width: 100px;
-    margin-left: 50%;
 }
 
 #formulairecommande input {

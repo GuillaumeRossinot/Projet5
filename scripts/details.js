@@ -93,6 +93,7 @@ fetch(teddyAPI)
             //panierLinea.push(descproduit);  //  ajout les nouvelles données
             storedValue = JSON.stringify(panierLinea); /*   stringify les données */
             localStorage.setItem("panier", storedValue);/*    mettre a jour les données */
+            NbArticlePanier();
         }
 
     });

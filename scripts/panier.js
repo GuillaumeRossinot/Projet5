@@ -21,6 +21,7 @@ function plusTeddy(idTeddy, colorTeddy, prixTeddy) {//todo
     }
     let panierDjson = JSON.stringify(panierD);
     localStorage.setItem("panier", panierDjson);
+    NbArticlePanier();
 }
 
 function moinsTeddy(idTeddy, colorTeddy, prixTeddy) {//todo
@@ -46,6 +47,7 @@ function moinsTeddy(idTeddy, colorTeddy, prixTeddy) {//todo
     }
     let panierDjson = JSON.stringify(panierD);
     localStorage.setItem("panier", panierDjson);
+    NbArticlePanier();
 }
 
 function calculTotalPrixpanier() {

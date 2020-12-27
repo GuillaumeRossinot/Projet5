@@ -1,5 +1,5 @@
 
-var commandeValidée = localStorage.getItem("commandeValidee");
+var commandeValidee = localStorage.getItem("commandeValidee");
 var panier = localStorage.getItem("panier");
 
 var teddyAPI = 'http://localhost:3000/api/teddies/';
@@ -15,13 +15,13 @@ function calcTeddyPrice(teddyId, quantiteTeddy) {
         .then(function (produit) {
             console.log("priceTeddy = " + produit.price);
             prixTotalTeddy += produit.price * quantiteTeddy;
-            document.getElementById('prixTotal').innerHTML = prixTotalTeddy;
+            document.getElementById('prixTotal').innerHTML = prixTotalTeddy + " €";
         })
 }
 
 
-if (commandeValidée != null && commandeValidée != '' && panier != null && panier != '') {
-    let commandeParseJSON = JSON.parse(commandeValidée);
+if (commandeValidee != null && commandeValidee != '' && panier != null && panier != '') {
+    let commandeParseJSON = JSON.parse(commandeValidee);
     let panierParseJSON = JSON.parse(panier);
 
     //let totalPanierEuro = 0;
@@ -40,6 +40,8 @@ if (commandeValidée != null && commandeValidée != '' && panier != null && pani
 Merci d'avoir commandé chez nous, voici votre numéro de commande : ${orderId}`;
     
     //localStorage.clear();
+    localStorage.removeItem('panier');
+    localStorage.removeItem('commandeValidee');
 }
 
 

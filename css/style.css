@@ -1,15 +1,20 @@
 body {
-    height: 100vh;
-    background-color: #43a0d1 !important;
+    /*background-color: #43a0d1 !important;*/
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
-    background-color: #4350d1;
+    /* background-color: #4350d1; */
     height: 150px;
     width: 100%;
     display: block;
     right: 0;
     left: 0;
+    background-image: url("../images/bg-breadcrumb.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -39,6 +44,22 @@ i {
     color: black;
 }
 
+.right-cart-number {
+    background: #ff4747;
+    max-width: 30px;
+    min-width: 25px;
+    height: 25px;
+    color: #fff;
+    border-radius: 15px;
+    position: absolute;
+    top: 80px;
+    right: 22px;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    padding: 0 2px;
+}
+
 #titre {
     position: relative;
     top: 0;
@@ -56,6 +77,16 @@ i {
 
 .produitours {
     border: 1px solid black;
+    background-color: white;
+    height: 430px;
+    width: 500px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.produitours img {
+    border: 1px solid grey;
 }
 
 img {
@@ -64,7 +95,8 @@ img {
     border: 1px solid black;
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    margin-top: 20px;
 }
 
 .produitours,
@@ -90,12 +122,15 @@ a.button {
 }
 
 footer {
-    background-color: #4350d1;
+    /* background-color: #4350d1; */
     height: 100px;
     margin-top: 104px;
     right: 0;
     bottom: 0;
     left: 0;
+    background-image: url("../images/ours-peluche-fond-transparent-arc-ciel_42349-712.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .infofooter {
