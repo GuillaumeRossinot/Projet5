@@ -39,15 +39,23 @@
                 </br>
                 <form>
                     <label for="nomContact">Nom : </label>
-                    <input type="text" name="nom" id="nomContact" required></br>
+                    <input type="text" onblur="validationFormBlur('nom')" name="nom" id="nomContact" required><br>
+                    <span id='missnom'></span><br>
                     <label for="prenomContact">Prénom : </label>
-                    <input type="text" name="prenom" id="prenomContact" required></br>
+                    <input type="text" onblur="validationFormBlur('prenom')" name="prenom" id="prenomContact"
+                        required><br>
+                    <span id='missprenom'></span><br>
                     <label for="adresseContact">Adresse : </label>
-                    <input type="text" name="adresse" id="adresseContact" required></br>
+                    <input type="text" onblur="validationFormBlur('adresse')" name="adresse" id="adresseContact"
+                        required><br>
+                    <span id='missadresse'></span><br>
                     <label for="villeContact">Ville : </label>
-                    <input type="text" name="ville" id="villeContact" required></br>
-                    <label for="emailContact">Mail : </label>
-                    <input type="email" name="email" id="emailContact" required></br>
+                    <input type="text" onblur="validationFormBlur('ville')" name="ville" id="villeContact" required><br>
+                    <span id='missville'></span><br>
+                    <label for="emailContact">email : </label>
+                    <input type="email" onblur="validationFormBlur('email')" name="email" id="emailContact"
+                        required><br>
+                    <span id='missemail'></span><br>
                     <input type="hidden" name="products" value='' />
                     <label></label>
                     <input type="button" id="EnvoieCommande" value="Commander !">

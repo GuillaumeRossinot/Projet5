@@ -81,3 +81,10 @@ h2 {
 #formulairecommande input {
     display: inline-block;
 }
+
+#formulairecommande span {
+    width: 100%;
+    text-align: center;
+    margin-left: 100px;
+    margin-bottom: 5px;
+}

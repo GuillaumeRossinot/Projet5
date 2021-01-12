@@ -40,7 +40,7 @@ function moinsTeddy(idTeddy, colorTeddy, prixTeddy) {//todo
         }
         else if(idp == idTeddy && produit.quantityp == 1 && colorp == colorTeddy){
             delete totalpanier[idTeddy][colorTeddy];
-            console.log("log panierD : " + panierD.indexOf(produit));
+            //console.log("log panierD : " + panierD.indexOf(produit));
             panierD.splice(panierD.indexOf(produit), 1);
             document.getElementById("listeproduits" + idTeddy + colorp).innerHTML = "";
         }
@@ -112,7 +112,7 @@ function postPanier(path, ListeProduit, method = 'post') {
     contact.address = document.getElementById('adresseContact').value;
     contact.city = document.getElementById('villeContact').value;
     contact.email = document.getElementById('emailContact').value;
-    console.log(contact);
+    //console.log(contact);
     
 
     var params = new Object();
@@ -128,15 +128,81 @@ function postPanier(path, ListeProduit, method = 'post') {
         var reponsePanier = JSON.parse(reponsePanierJSON);
         localStorage.setItem("commandeValidee", reponsePanierJSON);
         var orderId = reponsePanier.orderId;
-        console.log(reponsePanier);
-        console.log('orderId : ' + orderId);
+        //console.log(reponsePanier);
+        //console.log('orderId : ' + orderId);
 
         
         
         location.href = "./confcommande.html";
         // TODO : appeler la "page" de confirmation de commande.
     }
-} 
+}
+
+var formValid = document.getElementById('EnvoieCommande');
+            
+formValid.addEventListener('click', validationForm);
+            
+function validationFormBlur(champ) {
+    //console.log('champ =' + champ);
+
+    var field = document.getElementById(champ + 'Contact');
+    var missField = document.getElementById('miss' + champ);
+    var prenomValid = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
+    var nomValid = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
+    var adresseValid = /(\d+)?\,?\s?(bis|ter|quater)?\,?\s?(rue|avenue|boulevard|r|av|ave|bd|bvd|square|sente|impasse|cours|esplanade|allée|résidence|parc|rond-point|chemin|côte|place|cité|quai|passage|lôtissement|hameau)?\s([a-zA-Zà-ÿ0-9\s]{2,})+$/gi;
+    var villeValid = /^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$/;
+    var mailValid = /^[-+.\w]{1,64}@[-.\w]{1,64}\.[-.\w]{2,6}$/i;
+    var isValid = false;
+
+    //console.log('field.value =' + field.value);
+                //Si le champ est vide
+                if (field.validity.valueMissing){
+                    // event.preventDefault();
+                    missField.innerHTML = champ + ' manquant';
+                    missField.style.color = 'red';
+                    field.style.border = '2px solid red';
+                    isValid = false;
+                //Si le format de données est incorrect
+                }else if ((champ == 'prenom' && prenomValid.test(field.value) == false)
+                    || (champ == 'nom' && nomValid.test(field.value) == false)
+                    || (champ == 'adresse' && adresseValid.test(field.value) == false)
+                    || (champ == 'ville' && villeValid.test(field.value) == false)
+                    || (champ == 'email' && mailValid.test(field.value) == false)) {
+                    // event.preventDefault();
+                    missField.innerHTML = 'Format incorrect';
+                    missField.style.color = 'orange';
+                    field.style.border = '2px solid orange';
+                    isValid = false;
+                } else { 
+                    missField.innerHTML = '';
+                    missField.style.color = 'green';
+                    field.style.border = '2px solid green';
+                    isValid = true;
+    }
+    return isValid;
+}
+            
+function validationForm() {
+    var isFormValid = true;
+    if (!validationFormBlur('prenom')) {
+        isFormValid = false;
+    }
+        if(!validationFormBlur('nom')) {
+            isFormValid = false;
+        }
+        if(!validationFormBlur('adresse')) {
+            isFormValid = false;
+        }
+        if(!validationFormBlur('ville')) {
+            isFormValid = false;
+        }
+        if(!validationFormBlur('email')) {
+            isFormValid = false;
+    } 
+    return isFormValid;
+}
+
+    
 
 if (panierLinea != null) {
     var listeDeProduit = new Array();
@@ -197,8 +263,9 @@ if (panierLinea != null) {
     }
 
     document.getElementById("EnvoieCommande").onclick = function () {
-        postPanier('http://localhost:3000/api/teddies/order', listeDeProduit, 'post');
-            
+        if (validationForm()) {
+            postPanier('http://localhost:3000/api/teddies/order', listeDeProduit, 'post');
+        }
     };
 }
 else {
