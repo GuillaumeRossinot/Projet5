@@ -16,4 +16,8 @@ fetch('http://localhost:3000/api/teddies')
                     </div>`
         }
     })
-
+    .catch(function(error)
+    {
+        console.log(error);
+    });
+    

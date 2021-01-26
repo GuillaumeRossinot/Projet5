@@ -55,46 +55,12 @@ function calculTotalPrixpanier() {
     let totalpanierprix = 0;
     for (var keyid in totalpanier) {
         for (var keycolor in totalpanier[keyid]) {
-            //console.log ('id : ' + key + ' val : ' + totalpanier[key]);
             totalpanierprix += totalpanier[keyid][keycolor];
         }
     }
     document.getElementById('totalpanier').innerHTML = totalpanierprix + ' €';
 }
 
-/**
- * sends a request to the specified url from a form. this will change the window location.
- * @param {string} path the path to send the post request to
- * @param {object} params the paramiters to add to the url
- * @param {string} [method=post] the method to use on the form
- */
-/*
-function postPanier(path, params, method='post') {
-    console.log("j'envoie le panier de la muerte !");
-    // The rest of this code assumes you are not using a library.
-    // It can be made less wordy if you use one.
-    const form = document.createElement('form');
-    form.method = method;
-    form.action = path;
-
-    for (const key in params) {
-      if (params.hasOwnProperty(key)) {
-        const hiddenField = document.createElement('input');
-        hiddenField.type = 'hidden';
-        hiddenField.name = key;
-        hiddenField.value = JSON.stringify(params[key]);
-        console.log("["+key+"]" + '=' + JSON.stringify(params[key]));
-        form.appendChild(hiddenField);
-      }
-    }
-
-    
-
-    document.body.appendChild(form);
-    alert('HALTE !');
-    form.submit();
-  }
-  */
 
 /**
  * sends a request to the specified url from a form. this will change the window location.
@@ -139,7 +105,6 @@ function postPanier(path, ListeProduit, method = 'post') {
 }
 
 var formValid = document.getElementById('EnvoieCommande');
-            
 formValid.addEventListener('click', validationForm);
             
 function validationFormBlur(champ) {
@@ -270,4 +235,5 @@ if (panierLinea != null) {
 }
 else {
     document.getElementById('produits').innerHTML = `Votre panier est vide.`;
+    console.log("toto");
 }

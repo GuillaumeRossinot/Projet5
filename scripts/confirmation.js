@@ -1,9 +1,6 @@
-
 var commandeValidee = localStorage.getItem("commandeValidee");
 var panier = localStorage.getItem("panier");
-
 var teddyAPI = 'http://localhost:3000/api/teddies/';
-
 var prixTotalTeddy = 0;
 
 function calcTeddyPrice(teddyId, quantiteTeddy) {

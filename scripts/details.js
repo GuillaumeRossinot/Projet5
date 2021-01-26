@@ -95,7 +95,6 @@ fetch(teddyAPI)
             localStorage.setItem("panier", storedValue);/*    mettre a jour les données */
             NbArticlePanier();
         }
-
     });
         
 
